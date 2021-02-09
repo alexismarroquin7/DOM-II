@@ -6,12 +6,19 @@ const topTags = topNav.querySelectorAll('.nav-link');
 
 // console.log(topTags);
 topTags.forEach(navItem => {
-    navItem.addEventListener('focusin', () => navItem.style.fontSize = '3rem')
+    navItem.addEventListener('focusin', (e) => {
+        e.preventDefault();
+        navItem.style.fontSize = '2.5rem'
+    });
+    navItem.addEventListener('focusout', (e) => {
+        e.stopPropagation()
+        navItem.removeAttribute('style')
+        navItem.addEventListener('focusout', () => {
+            navItem.style.fontSize = '5rem';
+        });
+    });
 });
 
-topTags.forEach(navItem => {
-    navItem.addEventListener('focusout', () => navItem.removeAttribute('style'))
-});
 
 const myImages = document.querySelectorAll('img');
 
