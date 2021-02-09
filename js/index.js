@@ -81,5 +81,12 @@ function changeBodyBGColor(e){
 const letsGo = document.querySelector('.content-section .text-content h2');
 letsGo.addEventListener('click', changeBodyBGColor);
 
+function redBorder(e){
+    if(e.code = 'Backquote'){
+        const pTags = document.querySelectorAll('p');
+        pTags.forEach(p => p.textContent = 'Fun Bus!!!!!');
+    }
+}
 
+document.addEventListener('keydown', redBorder);
 
