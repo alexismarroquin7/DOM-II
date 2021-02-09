@@ -6,6 +6,13 @@ function DOMisReady(){
 
 document.addEventListener('DOMContentLoaded', DOMisReady)
 
+function pageIsLoaded(){
+    alert('Page Loaded!');
+}
+
+window.addEventListener('load', pageIsLoaded);
+
+
 const funBus = document.querySelector('h1');
 
 
