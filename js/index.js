@@ -1,7 +1,7 @@
 // Your code goes here
 
 function DOMisReady(){
-    alert('Welcome to Fun Bus!', false);
+    alert('Welcome to Fun Bus!');
 }
 
 document.addEventListener('DOMContentLoaded', DOMisReady)
@@ -12,8 +12,14 @@ function pageIsLoaded(){
 
 window.addEventListener('load', pageIsLoaded);
 
+function appendNewText(){
+    const funBus = document.querySelector('h1');
+    funBus.textContent = `Fun Bus!!!`
+}
 
-const funBus = document.querySelector('h1');
+window.addEventListener('resize', appendNewText);
+
+// const funBus = document.querySelector('h1');
 
 
 // function underLineText(e){
